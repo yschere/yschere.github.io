@@ -3,6 +3,7 @@
 
 html, body {
   background-color: #000;
+  color: #fff;
 }
 
 .container {
@@ -13,6 +14,7 @@ a {
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
 }
+
 .header {
 
 }
