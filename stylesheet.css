@@ -13,6 +13,7 @@ html, body {
 a {
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
+  color: #fff;
 }
 
 .header {
@@ -28,9 +29,9 @@ a {
 .sideNav li {
   display: block;
   float: left;
-  color: #CF9CFC;
+  background-color: #CF9CFC;
 }
 
 .sideNav .active {
-  color: #4C048B;
+  background-color: #4C048B;
 }
