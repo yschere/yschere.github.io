@@ -24,14 +24,23 @@ a {
   background-color: #b45caa;
   padding: 0;
   margin: 0;
+  height: 800px;
+}
+
+h1 {
+  font-family: 'Droid Serif', serif;
+  color: #fff;
+  font-weight: 200;
 }
 
 .sideNav li {
   display: block;
   float: left;
-  background-color: #CF9CFC;
+  color: #CF9CFC;
+  background-color: #fff;
 }
 
-.sideNav .active {
+.sideNav .active, .sideNav li:hover {
   background-color: #4C048B;
+  color: #fff;
 }
