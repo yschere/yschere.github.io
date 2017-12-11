@@ -52,6 +52,11 @@ div#nav li {
   margin: 0 -2px;
 }
 
+div#nav li.selected {
+  background-color: rgba(37,172,232,0.7);
+  border-radius: 10px;
+}
+
 div#content {
   margin: 0;
   padding: 20px 50px 0 50px;
