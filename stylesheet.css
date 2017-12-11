@@ -1,124 +1,46 @@
-body {
-  margin: 0;
-  padding: 0 100px 30px 100px;
-  background-color: lightblue;
-  animation: bannerBG 15s infinite;
-  font-family: 'Roboto', sans-serif;
+/*font-family: 'Droid Serif', serif;*/
+/*font-family: 'Montserrat', sans-serif;*/
+
+html, body {
+  background-color: #000;
+  color: #fff;
 }
 
-h1, h2, h3 {
-  font-family: 'Lora', serif;
+.container {
+  max-width: 1000px;
 }
 
 a {
+  font-family: 'Montserrat', sans-serif;
   text-decoration: none;
+  color: #fff;
 }
 
-div#banner {
-  margin: 0;
-  padding: 0;
-  height: 138px;
-  background-image: url("banner.png");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  /*animation: bannerBG 15s infinite;*/
+.header {
+
 }
 
-div#nav {
-  background-color: black;
-  color: white;
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  /*animation: navBG 5s infinite;*/
-}
-
-div#nav ul {
-  list-style-type: none;
+.main {
+  background-color: #b45caa;
   padding: 0;
   margin: 0;
+  height: 800px;
 }
 
-div#nav a  {
-   color: white;
-   border-radius: 10px;
-   padding: 20px 3em;
-   margin: 0;
+h1 {
+  font-family: 'Droid Serif', serif;
+  color: #fff;
+  font-weight: 200;
 }
 
-div#nav a:hover {
-  background-color: rgba(37,172,232,1);
+.sideNav li {
+  display: block;
+  float: left;
+  color: #CF9CFC;
+  background-color: #fff;
 }
 
-div#nav li {
-  display: inline-block;
-  padding: 20px 0;
-  margin: 0 -2px;
-}
-
-div#nav li.selected {
-  background-color: rgba(37,172,232,0.7);
-  border-radius: 10px;
-}
-
-div#content {
-  margin: 0;
-  padding: 20px 50px 0 50px;
-  display: flex;
-}
-
-div#conImg{}
-
-div#conText{
-  margin: 20px;
-}
-
-div.work {
-  /*position: relative;*/
-  /*width: 75%;*/
-  display: inline-flex;
-  padding: 0 0 30px 20px;
-}
-
-div.work img {
-  width: 250px;
-  height: 200px;
-}
-
-div.text {
-  padding-left: 10px;
-}
-
-@keyframes navBG {
-  0% {background-color: #000;}
-  25% {background-color: #25ace8;}
-  50% {background-color: #fff;}
-  75% {background-color: #25ace8;}
-  100% {background-color: #000;}
-}
-
-@keyframes bannerBG {
-  0%{background-color: #f23e3e;}
-  20%{background-color: #953ef2;}
-  40%{background-color: #3ec2f2;}
-  60%{background-color: #3ef247;}
-  80%{background-color: #f2ce3e;}
-  100%{background-color: #f23e3e;}
-}
-
-@media screen and (max-width: 600px) {
-  body {
-    padding: 0 30px;
-  }
-  div#banner {
-    padding: 0;
-  }
-  div#content {
-    display: block;
-    padding: 0;
-  }
-  div#conImg {
-    text-align: center;
-    margin: 10px;
-  }
-  div#conText{}
+.sideNav .active, .sideNav li:hover {
+  background-color: #4C048B;
+  color: #fff;
 }
