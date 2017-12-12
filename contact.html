@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Yodit Chere | Portfolio</title>
@@ -5,8 +6,13 @@
     <link href="https://fonts.googleapis.com/css?family=Lora|Roboto" rel="stylesheet">
   </head>
 
-  <body>
+  <body onresize="sizeCheck()">
     <div id="banner">
+    </div>
+    <div id="collapsed-nav"><a href="javascript:toggleNav()" id="nav-btn">
+      <div class="menu m1"></div><div class="blank b1"></div>
+      <div class="menu m2"></div><div class="blank b2"></div>
+      <div class="menu m3"></div></a>
     </div>
     <div id="nav">
       <ul>
@@ -18,17 +24,18 @@
     <div id="content" style="display:block">
       <h2>Contact Me</h2>
       <div class="text">
-        <a href="mailto:yschere@gmail.com" target="_blank">
+        <a href="mailto:yschere@gmail.com" target="_blank" alt="Email me: yschere@gmail.com">
           <img src="logo_gmail_64px.png">
         </a>
-        <a href="https://www.github.com/yschere" target="_blank">
+        <a href="https://www.github.com/yschere" target="_blank" alt="My Github">
           <img src="GitHub-Mark-64px.png">
         </a>
-        <a href="https://www.linkedin.com/in/yodit-chere-a8a4885a/" target="_blank">
+        <a href="https://www.linkedin.com/in/yodit-chere-a8a4885a/" target="_blank" alt="My LinkedIn">
           <img src="In-Black-66px-R.png">
         </a>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 
 </html>

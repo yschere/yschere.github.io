@@ -1,11 +1,18 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Yodit Chere | Portfolio</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link href="https://fonts.googleapis.com/css?family=Lora|Roboto" rel="stylesheet">
   </head>
-  <body>
+
+  <body onresize="sizeCheck()">
     <div id="banner">
+    </div>
+    <div id="collapsed-nav"><a href="javascript:toggleNav()" id="nav-btn">
+      <div class="menu m1"></div><div class="blank b1"></div>
+      <div class="menu m2"></div><div class="blank b2"></div>
+      <div class="menu m3"></div></a>
     </div>
     <div id="nav">
       <ul>
@@ -23,5 +30,6 @@
         <p>Welcome to the portfolio of Yodit Chere. </p>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
