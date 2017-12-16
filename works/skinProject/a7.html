@@ -1,0 +1,133 @@
+<html>
+  <head>
+    <title>Webpage Skin Preference</title>
+    <script>
+      var input = "";
+      function getCookie() {
+        if(document.cookie != "") {
+          userCookie = document.cookie.split(";");
+          input = userCookie[0].split("=")[1];
+          if (checkStyle(input)) { document.f1.skin.value = input; setStyle(input); }
+          document.f1.skin.value = "";
+        }
+      }
+      function inputBlur(){
+        document.f1.skin.blur();
+      }
+
+      function setCookie() {
+        if (!checkStyle(input)) { alert('Invalid skin'); inputBlur(); }
+        expireDate = new Date;
+        expireDate.setMonth(expireDate.getMonth()+2);
+        document.cookie = "skin=" + input + ";expires=" + expireDate.toGMTString();
+      }
+
+      function checkStyle(val) {
+        return (val=="water" || val=="air" || val=="fire" || val=="ground");
+      }
+
+      function setStyle() {
+        var ip = document.f1.skin.value.toLowerCase();
+        switch(ip){
+          case "water":
+            input = ip;
+            document.body.style.background = "url(water.jpg)";
+            document.body.style.backgroundSize = "cover";
+            document.body.style.color = "black";
+            document.body.style.fontFamily = "Verdana";
+
+            lines = document.getElementById('hr');
+            lines.style.width = "50%";
+            lines.style.visibility = "visible";
+
+            var elem = document.getElementById('sp');
+            elem.innerHTML = " WATER ";
+            elem.style.backgroundColor = "black";
+            elem.style.color = "white";
+            elem.style.letterSpacing = "2px";
+            elem.style.padding = "10px";
+            break;
+          case "air":
+            input = ip;
+            document.body.style.backgroundImage = "url(air.jpeg)";
+            document.body.style.backgroundSize = "cover";
+            document.body.style.color = "#1341c1";
+            document.body.style.fontFamily = "Calibri";
+
+            lines = document.getElementById('hr');
+            lines.style.width = "75%";
+            lines.style.visibility = "visible";
+
+            var elem = document.getElementById('sp');
+            elem.innerHTML = " AIR ";
+            elem.style.backgroundColor = "purple";
+            elem.style.color = "white";
+            elem.style.letterSpacing = "2px";
+            elem.style.padding = "10px";
+            break;
+          case "fire":
+            input = ip;
+            document.body.style.backgroundImage = "url(fire.jpeg)";
+            document.body.style.backgroundSize = "cover";
+            document.body.style.color = "#f9fc53";
+            document.body.style.fontFamily = "Georgia";
+
+            lines = document.getElementById('hr');
+            lines.style.visibility = "hidden";
+
+            var elem = document.getElementById('sp');
+            elem.innerHTML = " FIRE ";
+            elem.style.backgroundColor = "orange";
+            elem.style.color = "black";
+            elem.style.letterSpacing = "2px";
+            elem.style.padding = "10px";
+            break;
+          case "ground":
+            input = ip;
+            document.body.style.backgroundImage = "url(ground.jpg)";
+            document.body.style.backgroundSize = "cover";
+            document.body.style.color = "white";
+            document.body.style.fontFamily = "Garamond";
+
+            lines = document.getElementById('hr');
+            lines.style.visibility = "hidden";
+
+            var elem = document.getElementById('sp');
+            elem.innerHTML = " GROUND ";
+            elem.style.backgroundColor = "black";
+            elem.style.color = "green";
+            elem.style.letterSpacing = "2px";
+            elem.style.padding = "10px";
+            break;
+          default:
+            alert('Invalid style');
+            break;
+        }
+      }
+    </script>
+    <style>
+      h1 {
+        font-size: 350%;
+      }
+      p {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    </style>
+  </head>
+
+  <body onload="getCookie();">
+
+    <h1 align="center">User Preferences</h1>
+
+    <p align="center">Skin of choice: <span id="sp"></span></p>
+
+    <hr id="hr">
+
+    <center><form name="f1" onsubmit="javascript:inputBlur();return false;">
+      <p><b>Change Skin:</b> <input type="text" name="skin" onblur="javascript:setStyle()"> <br> (Styles include: water, air, fire, ground)</p>
+      <input type="button" value="Save Skin" onclick="javascript:setStyle();javascript:setCookie()">
+    </form></center>
+
+  </body>
+</html>

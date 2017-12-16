@@ -1,0 +1,59 @@
+<html>
+
+  <head>
+    <title>Travel Site (using DHTML)</title>
+    <style>
+      #tnList {
+        position: absolute;
+        top: 80px;
+        left: 200px;
+      }
+
+      #tnList img {
+        width: 100px;
+        height: 100px;
+        border: medium inset white;
+        margin-right: 5px;
+      }
+
+      #fullsize img {
+        height: 400px;
+        width: auto;
+        border: 5px solid white;
+        position: absolute;
+        top: 200px;
+        left: 100px;
+      }
+    </style>
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+
+  <body bgcolor="lightblue">
+    <h1>Travel Site</h1>
+
+    <hr>
+
+    <p>Select Destination:</p>
+    <form id="form">
+      <select id="menu" onChange="javascript:changePictures()">
+        <option value="Seattle" selected>Seattle</option>
+        <option value="Chicago">Chicago</option>
+        <option value="New York">New York</option>
+        <option value="San Francisco">San Francisco</option>
+      </select>
+    </form>
+
+    <div id="tnList">
+      <img name="img1" src="seattle1.jpg" onMouseOver="document.bigImg.src=img1.src">
+      <img name="img2" src="seattle2.jpg" onMouseOver="document.bigImg.src=img2.src">
+      <img name="img3" src="seattle3.jpg" onMouseOver="document.bigImg.src=img3.src">
+      <img name="img4" src="seattle4.jpg" onMouseOver="document.bigImg.src=img4.src">
+    </div>
+
+    <div id="fullsize">
+      <img name="bigImg" src="seattle1.jpg">
+    </div>
+
+  </body>
+
+</html>

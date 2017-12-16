@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Picture Slideshow</title>
+
+      <script language=javascript>
+        var imgArray = new Array("sunset1.jpg", "sunset2.jpg", "sunset3.jpg", "sunset4.jpg")
+        var linkArray = new Array("https://www.youtube.com/","https://www.rottentomatoes.com/","https://soundcloud.com/","http://losrios.edu/");
+
+        Ocount = 0;
+        imgCount = imgArray.length;
+        function nextImage() {
+          if (document.images) {
+            //code for ordered slideshow
+            Ocount++;
+            if (Ocount == imgCount) {
+              Ocount = 0;
+            }
+            document.imgOrdered.src = imgArray[Ocount];
+
+            //code for randomized slideshow
+            Rcount = Math.floor(Math.random() * imgArray.length);
+            document.imgRandom.src = imgArray[Rcount];
+          }
+          setTimeout("nextImage()", 3000);
+        }
+
+        function imgLinkO() {
+          document.location.href = linkArray[Ocount];
+        }
+        function imgLinkR() {
+          document.location.href = linkArray[Rcount];
+        }
+      </script>
+
+  </head>
+
+  <body onload=nextImage()>
+    <h1 align="center">Rotating Banners</h1>
+
+    <a href="javascript:imgLinkO()">
+      <center><img src="sunset1.jpg" name="imgOrdered" border="1px solid blue"></center>
+    </a>
+    <p align="center">Ordered banner</p><br><br>
+
+    <a href="javascript:imgLinkR()">
+      <center><img src="sunset1.jpg" name="imgRandom" border="1px solid blue"></center>
+    </a>
+    <p align="center">Randomized banner</p>
+
+  </body>
+
+</html>

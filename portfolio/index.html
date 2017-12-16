@@ -1,41 +1,48 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Yodit Chere | Portfolio</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="..\css\stylesheet.css">
     <link href="https://fonts.googleapis.com/css?family=Lora|Roboto" rel="stylesheet">
   </head>
 
-  <body>
+  <body onresize="sizeCheck()">
     <div id="banner">
+    </div>
+    <div id="collapsed-nav"><a href="javascript:toggleNav()" id="nav-btn">
+      <div class="menu m1"></div><div class="blank b1"></div>
+      <div class="menu m2"></div><div class="blank b2"></div>
+      <div class="menu m3"></div></a>
     </div>
     <div id="nav">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li class="selected"><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact Me</a></li>
+        <li><a href="..\index.html">Home</a></li>
+        <li class="selected"><a href="index.html">Portfolio</a></li>
+        <li><a href="..\contact\contact.html">Contact</a></li>
       </ul>
     </div>
     <div id="content" style="display:block">
       <h2>Portfolio</h2>
       <div class="work">
-        <a href="http://cisw2.crc.losrios.edu/~w1406054/assignment7.html" target="_blank"><img src="pf3.png"></a>
+        <a href="..\works\skinProject\a7.html" target="_blank"><img src="..\img\pf3.png"></a>
         <div class="text"><h3>Skin Preference - 11/2017</h3>
         <p>Change look and feel of a page based on user input</p></div>
       </div>
       <br>
       <div class="work">
-        <a href="http://cisw2.crc.losrios.edu/~w1406054/assignment6.html" target="_blank"><img src="pf2.png"></a>
+        <a href="..\works\travelProject\a6.html" target="_blank"><img src="..\img\pf2.png"></a>
         <div class="text"><h3>Travel Site Images - 10/2017</h3>
         <p>Change main image depending on user mouse over</p></div>
       </div>
       <br>
       <div class="work">
-        <a href="http://cisw2.crc.losrios.edu/~w1406054/assignment4.html" target="_blank"><img src="pf1.png"></a>
+        <a href="..\works\bannerProject\a4.html" target="_blank"><img src="..\img\pf1.png"></a>
         <div class="text"><h3>Rotating Banners - 10/2017</h3>
         <p>Rotating pictures at set interval using two different patterns</p></div>
       </div>
 
     </div>
+    <script src="..\js\script.js"></script>
   </body>
 
 </html>
