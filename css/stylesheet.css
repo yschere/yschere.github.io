@@ -20,7 +20,7 @@ div#banner {
   /*margin: 0;*/
   padding: 0;
   height: 138px;
-  background-image: url("banner.png");
+  background-image: url("..\\img\\banner.png");
   background-size: 100%;
   background-repeat: no-repeat;
   display: block;
