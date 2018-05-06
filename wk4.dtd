@@ -4,6 +4,7 @@
 <!ELEMENT ID (#PCDATA)>
 <!ELEMENT FullName (#PCDATA)>
 <!ELEMENT DateOfBirth (#PCDATA)>
+<!ELEMENT Age (#PCDATA)>
 <!ELEMENT Gender (#PCDATA)>
 <!ELEMENT ServiceDate (#PCDATA)>
 <!ELEMENT ProcedureCode (#PCDATA)>
