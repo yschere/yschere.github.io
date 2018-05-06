@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!ELEMENT PatientTable (Patient+)>
-<!ELEMENT Patient (ID,FullName,DateOfBirth,Gender,ServiceDate,ProcedureCode,PrimaryDiagnosis)>
+<!ELEMENT Patient (ID,FullName,DateOfBirth,Age,Gender,ServiceDate,ProcedureCode,PrimaryDiagnosis)>
 <!ELEMENT ID (#PCDATA)>
 <!ELEMENT FullName (#PCDATA)>
 <!ELEMENT DateOfBirth (#PCDATA)>
