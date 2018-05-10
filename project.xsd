@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="LibraryDB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Book" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" type="xs:string" />
+              <xs:element name="Title" type="xs:string" />
+              <xs:element name="Author" type="xs:string" minOccurs="0" />
+              <xs:element name="Publisher" type="xs:string" minOccurs="0" />
+              <xs:element name="Edition" type="xs:string" minOccurs="0" />
+              <xs:element name="Description" type="xs:string" minOccurs="0" />
+              <xs:element name="Series" type="xs:string" minOccurs="0" />
+              <xs:element name="Note" minOccurs="0" >
+                <xs:simpleType>
+                  <xs:list itemType="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Audience" type="xs:string" minOccurs="0" />
+              <xs:element name="Contents" type="xs:string" minOccurs="0" />
+              <xs:element name="Summary" type="xs:string" minOccurs="0" />
+              <xs:element name="Subject" minOccurs="0">
+                <xs:simpleType>
+                  <xs:list itemType="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Genre" type="xs:string" minOccurs="0" />
+              <xs:element name="AlternateAuthor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:list itemType="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OtherTitle" type="xs:string" minOccurs="0" />
+              <xs:element name="UniformTitle" type="xs:string" minOccurs="0" />
+              <xs:element name="OCLC" type="xs:string" minOccurs="0" />
+              <xs:element name="ISBN" minOccurs="0" maxOccurs="2">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:positiveInteger">
+                      <xs:attribute name="ver" type="xs:positiveInteger" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EBook" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" type="xs:string" />
+              <xs:element name="Title" type="xs:string" />
+              <xs:element name="Author" type="xs:string" minOccurs="0" />
+              <xs:element name="Publisher" type="xs:string" minOccurs="0" />
+              <xs:element name="Edition" type="xs:string" minOccurs="0" />
+              <xs:element name="Description" type="xs:string" minOccurs="0" />
+              <xs:element name="SystemReq" minOccurs="0" >
+                <xs:simpleType>
+                  <xs:list itemType="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Link" type="xs:string" minOccurs="0" />
+              <xs:element name="Series" type="xs:string" minOccurs="0" />
+              <xs:element name="Note" minOccurs="0" >
+                <xs:simpleType>
+                  <xs:list itemType="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Audience" type="xs:string" minOccurs="0" />
+              <xs:element name="Contents" type="xs:string" minOccurs="0" />
+              <xs:element name="Summary" type="xs:string" minOccurs="0" />
+              <xs:element name="Subject" minOccurs="0">
+                <xs:simpleType>
+                  <xs:list itemType="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Genre" minOccurs="0" >
+                <xs:simpleType>
+                  <xs:list itemType="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AlternateAuthor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:list itemType="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OtherTitle" type="xs:string" minOccurs="0" />
+              <xs:element name="UniformTitle" type="xs:string" minOccurs="0" />
+              <xs:element name="OCLC" type="xs:string" minOccurs="0" />
+              <xs:element name="ISBN" minOccurs="0" maxOccurs="2">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:positiveInteger">
+                      <xs:attribute name="ver" type="xs:positiveInteger" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Software" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" type="xs:string" />
+              <xs:element name="Title" type="xs:string" />
+              <xs:element name="Publisher" type="xs:string" minOccurs="0" />
+              <xs:element name="Edition" type="xs:string" minOccurs="0" />
+              <xs:element name="Description" type="xs:string" minOccurs="0" />
+              <xs:element name="SystemReq" minOccurs="0" >
+                <xs:simpleType>
+                  <xs:list itemType="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Note" minOccurs="0" >
+                <xs:simpleType>
+                  <xs:list itemType="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Credits" type="xs:string" minOccurs="0" />
+              <xs:element name="Audience" type="xs:string" minOccurs="0" />
+              <xs:element name="Contents" type="xs:string" minOccurs="0" />
+              <xs:element name="Summary" type="xs:string" minOccurs="0" />
+              <xs:element name="Subject" minOccurs="0">
+                <xs:simpleType>
+                  <xs:list itemType="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Genre" minOccurs="0" >
+                <xs:simpleType>
+                  <xs:list itemType="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AlternateAuthor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:list itemType="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OtherTitle" type="xs:string" minOccurs="0" />
+              <xs:element name="Music" type="xs:string" minOccurs="0" />
+              <xs:element name="OCLC" type="xs:string" minOccurs="0" />
+              <xs:element name="UPC" type="xs:string" minOccurs="0" />
+              <xs:element name="ISBN" minOccurs="0" maxOccurs="2">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:positiveInteger">
+                      <xs:attribute name="ver" type="xs:positiveInteger" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DVD" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" type="xs:string" />
+              <xs:element name="Title" type="xs:string" />
+              <xs:element name="Publisher" type="xs:string" />
+              <xs:element name="Edition" type="xs:string" minOccurs="0" />
+              <xs:element name="Description" type="xs:string" minOccurs="0" />
+              <xs:element name="Series" type="xs:string" minOccurs="0" />
+              <xs:element name="Performer" type="xs:string" minOccurs="0" />
+              <xs:element name="SystemReq" minOccurs="0" >
+                <xs:simpleType>
+                  <xs:list itemType="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Note" minOccurs="0" >
+                <xs:simpleType>
+                  <xs:list itemType="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cast" type="xs:string" minOccurs="0" />
+              <xs:element name="Credits" type="xs:string" minOccurs="0" />
+              <xs:element name="Access" type="xs:string" minOccurs="0" />
+              <xs:element name="Audience" type="xs:string" minOccurs="0" />
+              <xs:element name="Contents" type="xs:string" minOccurs="0" />
+              <xs:element name="Summary" type="xs:string" minOccurs="0" />
+              <xs:element name="Subject" minOccurs="0">
+                <xs:simpleType>
+                  <xs:list itemType="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Genre" minOccurs="0" >
+                <xs:simpleType>
+                  <xs:list itemType="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AlternateAuthor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:list itemType="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OtherTitle" type="xs:string" minOccurs="0" />
+              <xs:element name="UniformTitle" type="xs:string" minOccurs="0" />
+              <xs:element name="Music" type="xs:string" minOccurs="0" />
+              <xs:element name="OCLC" type="xs:string" minOccurs="0" />
+              <xs:element name="UPC" type="xs:string" minOccurs="0" />
+              <xs:element name="ISBN" minOccurs="0" maxOccurs="2">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:positiveInteger">
+                      <xs:attribute name="ver" type="xs:positiveInteger" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VHS" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" type="xs:string" />
+              <xs:element name="Title" type="xs:string" />
+              <xs:element name="Publisher" type="xs:string" />
+              <xs:element name="Edition" type="xs:string" minOccurs="0" />
+              <xs:element name="Description" type="xs:string" minOccurs="0" />
+              <xs:element name="Series" type="xs:string" minOccurs="0" />
+              <xs:element name="Performer" type="xs:string" minOccurs="0" />
+              <xs:element name="SystemReq" minOccurs="0" >
+                <xs:simpleType>
+                  <xs:list itemType="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Note" minOccurs="0" >
+                <xs:simpleType>
+                  <xs:list itemType="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cast" type="xs:string" minOccurs="0" />
+              <xs:element name="Credits" type="xs:string" minOccurs="0" />
+              <xs:element name="Audience" type="xs:string" minOccurs="0" />
+              <xs:element name="Contents" type="xs:string" minOccurs="0" />
+              <xs:element name="Summary" type="xs:string" minOccurs="0" />
+              <xs:element name="Subject" minOccurs="0" >
+                <xs:simpleType>
+                  <xs:list itemType="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Genre" minOccurs="0" >
+                <xs:simpleType>
+                  <xs:list itemType="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AlternateAuthor" minOccurs="0" >
+                <xs:simpleType>
+                  <xs:list itemType="xs:string" />
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OtherTitle" type="xs:string" minOccurs="0" />
+              <xs:element name="UniformTitle" type="xs:string" minOccurs="0" />
+              <xs:element name="Music" type="xs:string" minOccurs="0" />
+              <xs:element name="OCLC" type="xs:string" minOccurs="0" />
+              <xs:element name="UPC" type="xs:string" minOccurs="0" />
+              <xs:element name="ISBN" minOccurs="0" maxOccurs="2">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:positiveInteger">
+                      <xs:attribute name="ver" type="xs:positiveInteger" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
