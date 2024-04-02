@@ -1,0 +1,61 @@
+/*font-family: 'Droid Serif', serif;*/
+/*font-family: 'Montserrat', sans-serif;*/
+
+html, body {
+  background-color: #000;
+  color: #fff;
+}
+
+.container {
+  -webkit-max-width: 1000px;
+  -moz-max-width: 1000px;
+  max-width: 1000px;
+}
+
+a {
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  color: #fff;
+}
+
+#header {
+
+}
+
+#main {
+  background-color: #b45caa;
+  padding: 0;
+  margin: 0;
+  height: 800px;
+}
+
+#footer {
+  background-color: #b45caa;
+  color: #fff;
+}
+
+h1 {
+  font-family: 'Droid Serif', serif;
+  color: #fff;
+  font-weight: 200;
+}
+
+.sideNav li {
+  display: block;
+  float: left;
+  color: #CF9CFC;
+  background-color: #fff;
+}
+
+.sideNav .active, .sideNav li:hover {
+  background-color: #4C048B;
+  color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  #main {
+    height: auto;
+  }
+
+
+}
